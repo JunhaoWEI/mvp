@@ -10,7 +10,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/googlemvp" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/mvp2" />
+            <option value="$PROJECT_DIR$/mvvm" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
