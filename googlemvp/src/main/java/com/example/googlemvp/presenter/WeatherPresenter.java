@@ -8,6 +8,8 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -23,6 +25,7 @@ public class WeatherPresenter implements WeatherContract.Presenter {
     private WeatherContract.View mWeatherView;
     private Handler mHandler = new Handler();
 
+    @Inject
     public WeatherPresenter(WeatherContract.View view) {
         mWeatherView = view;
         mWeatherView.setPresenter(this);

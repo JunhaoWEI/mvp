@@ -12,6 +12,8 @@ import com.example.googlemvp.contract.WeatherContract;
 import com.example.googlemvp.model.WeatherEntity;
 import com.example.googlemvp.presenter.WeatherPresenter;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
         WeatherContract.View {
 
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressBar mProgressBar;
     private Button mButton;
 
-    private WeatherContract.Presenter mPresenter;
+    //private WeatherContract.Presenter mPresenter;
+    @Inject
+    WeatherContract.Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
         mButton = (Button) findViewById(R.id.button);
 
-        new WeatherPresenter(this);
+        //new WeatherPresenter(this);
+      //  DaggerMainComponent.builder().build().inject(this);
+
 
 
         mButton.setOnClickListener(this);
